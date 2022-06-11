@@ -4,7 +4,13 @@
 {% block body %}
 
     <h1>Flights:</h1>
-    {{flights}}
+    <ul>
+        {% for flight in flights %}
+            <li>{{flight.id}}: From {{flight.origin}} to {{flight.destination}} in {{flight.duration}}</li>
+        {% endfor %}
+    </ul>
+
+
 
 {% endblock %}
 
