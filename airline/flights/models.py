@@ -17,3 +17,4 @@ class Flight(models.Model):
     destination = models.ForeignKey(
         Airport, on_delete=models.CASCADE, related_name="arrivals")    
     duration = models.IntegerField()
+    
