@@ -5,4 +5,5 @@ from .models import *
 
 admin.site.register(Flight)
 admin.site.register(Airport)
+admin.site.register(Passenger)
 

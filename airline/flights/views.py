@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import *
+from .models import Flight, Passenger, Airport
 # Create your views here.
 
 def index(request):
@@ -12,9 +12,10 @@ def index(request):
     
 def flight(request, flight_id): # <- for get
     flight = Flight.objects.get(id = flight_id) # dictunary for post flight information
-    
+    passengers = flight.passengers.all()
     return render(request, 'flights/flight.html', {
         "flight": flight,
+        "Passengers": passengers
     })
 
 
